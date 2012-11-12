@@ -29,6 +29,14 @@
                 <GradientStop Offset="1" Color="Turquoise" />
             </LinearGradientBrush>
 
+    <Style x:Key="MyTxtStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Times New Roman" />
+        <Setter Property="Foreground" Value="{StaticResource MyBrush}" />
+        <Setter Property="FontSize" Value="40"  />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+    </Style>
+
 
 
 </ResourceDictionary>
