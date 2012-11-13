@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="test.DataBindingDemo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:test"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="topTxt" Text="Demostration of Data Binding" FontSize="50" VerticalAlignment="Top"
+                    HorizontalAlignment="Center" FontFamily="Matura MT Script Capitals">
+            <TextBlock.Foreground>
+                <LinearGradientBrush StartPoint="0 0" EndPoint="1 1">
+                    <GradientStop Offset="0" Color="Snow"/>
+                    <GradientStop Offset="0.3" Color="Aqua"/>
+                    <GradientStop Offset="0.8" Color="AntiqueWhite"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock Text="Bind this style to the above." FontSize="60" VerticalAlignment="Center"
+                   HorizontalAlignment="Center" FontFamily="Matura MT Script Capitals"
+                   Foreground="{Binding ElementName='topTxt',Path='Foreground'}">
+        </TextBlock>
+    </Grid>
+</Page>

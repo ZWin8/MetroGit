@@ -30,7 +30,7 @@ namespace test
         /// property is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-
+            // Path Demonstration
             LineSegment lineSeg1 = new LineSegment();
             lineSeg1.Point = new Point(500, 500);
             LineSegment lineSeg2 = new LineSegment();

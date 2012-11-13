@@ -29,7 +29,7 @@ namespace test
         /// property is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-             
+            // ImageBrush Demonstration 
             double x, y;
             Random ran = new Random();
             for (x = -1000; x < 1000; x+=5)

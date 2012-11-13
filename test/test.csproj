@@ -107,6 +107,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataBindingDemo.xaml.cs">
+      <DependentUpon>DataBindingDemo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SecondPage.xaml.cs">
       <DependentUpon>SecondPage.xaml</DependentUpon>
     </Compile>
@@ -135,6 +138,10 @@
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\thunder.jpg" />
     <Content Include="Assets\thunder.png" />
+    <Page Include="DataBindingDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="StyleDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

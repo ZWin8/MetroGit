@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -70,6 +71,11 @@ namespace test
             (this.Content as Grid).Children.Add(txt);
             (this.Content as Grid).Children.Add(txt2);
             (this.Content as Grid).Children.Add(txt3);
+        }
+
+        private void Page_DoubleTapped_1(object sender, DoubleTappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(DataBindingDemo));
         }
     }
 }
