@@ -22,5 +22,31 @@
                    HorizontalAlignment="Center" FontFamily="Matura MT Script Capitals"
                    Foreground="{Binding ElementName='topTxt',Path='Foreground'}">
         </TextBlock>
+        <!--Another way of binding in XAML-->
+        <TextBlock Text="Bind this style to the above. Another way" FontSize="60" VerticalAlignment="Center"
+                   HorizontalAlignment="Center" FontFamily="Matura MT Script Capitals"
+                   Margin="0 200 0 0">
+            <TextBlock.Foreground>
+                <Binding x:Name="bind1" ElementName="topTxt" Path="Foreground"/>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <!-- Even bind to different property !!! -->
+        <TextBlock FontSize="30" VerticalAlignment="Center"
+                   HorizontalAlignment="Center" FontFamily="Matura MT Script Capitals"
+                   Margin="0 600 0 0"
+                   Text="{Binding ElementName='topTxt', Path='FontFamily.Source'}">
+            <TextBlock.Foreground>
+                <Binding ElementName="topTxt" Path="Foreground"/>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <!-- Bind to self property!! -->
+        <TextBlock FontSize="30" VerticalAlignment="Center"
+                   HorizontalAlignment="Right" FontFamily="Matura MT Script Capitals"
+                   Margin="0 600 400 0"
+                   Text="{Binding RelativeSource={RelativeSource Self}, Path='FontSize'}">
+            <TextBlock.Foreground>
+                <Binding ElementName="topTxt" Path="Foreground"/>
+            </TextBlock.Foreground>
+        </TextBlock>
     </Grid>
 </Page>
